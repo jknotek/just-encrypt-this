@@ -1,0 +1,113 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+input, textarea, button {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+textarea {
+  height: 100px;
+  min-height: 60px;
+  resize: vertical;
+}
+
+button {
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.input-section {
+  margin-top: 10px;
+}
+
+#horizontal-wrapper {
+  height: 100%;
+  min-width: 300px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+#vertical-wrapper-positioner {
+  width: 0px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#vertical-wrapper {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#encrypt-container {
+  display: none;
+}
+
+#encrypt-password {
+  margin-bottom: 10px;
+}
+
+#btn-encrypt-input {
+  color: white;
+  background: #04cb00;
+}
+
+#encrypt-output {
+  display: none;
+}
+
+#decrypt-container {
+  display: none;
+}
+
+#decrypt-link {
+  float: right;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#decrypt-password-container {
+  width: 100%;
+  display: none;
+}
+
+#decrypt-output {
+  display: none;
+}
+
+#btn-decrypt-input {
+  color: white;
+  background: #d757fb;
+}
+
+#btn-new-message {
+  color: white;
+  background: #00d9ff;
+}

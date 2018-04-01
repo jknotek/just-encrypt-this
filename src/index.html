@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Just Encrypt This</title>
+    <link inline rel="stylesheet" href="src/style.css"></link>
+</head>
+<body>
+<div id="horizontal-wrapper">
+    <div id="vertical-wrapper-positioner"></div>
+    <div id="vertical-wrapper">
+        <div id="encrypt-container">
+            <div class="input-section">
+                <label for="encrypt-message">Message:</label>
+                <textarea id="encrypt-message"></textarea>
+            </div>
+            <div class="input-section">
+                <label for="encrypt-password">Password:</label>
+                <input id="encrypt-password" type="password" autocomplete="off">
+            </div>
+            <div class="input-section">
+                <button
+                    id="btn-encrypt-input"
+                    onclick="encryptInput()"
+                    >Encrypt and Generate Link</button>
+            </div>
+            <div id="encrypt-output" class="input-section">
+                <label for="decrypt-link-text">The link below is ready for you to copy!</label>
+                <textarea id="decrypt-link-text" readonly></textarea>
+                <a id="decrypt-link" target="_blank" href="#"><u>Visit Link</u> ↗️</a>
+            </div>
+        </div>
+        <div id="decrypt-container">
+            <div id="decrypt-password-container">
+                <div class="input-section">
+                    <label for="decrypt-password">Password:</label>
+                    <input id="decrypt-password" type="password" autocomplete="off">
+                </div>
+                <div class="input-section">
+                    <button
+                        id="btn-decrypt-input"
+                        onclick="decryptInput()">Decrypt Message</button>
+                </div>
+            </div>
+            <div id="decrypt-output">
+                <div class="input-section">
+                    <label for="decrypted-message">Decrypted Message:</label>
+                    <textarea
+                        id="decrypted-message"
+                        placeholder="Sorry... This message is empty."
+                        readonly></textarea>
+                </div>
+                <div class="input-section">
+                    <button
+                        id="btn-new-message"
+                        onclick="newMessage()"
+                        >Encrypt a New Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script inline src="node_modules/sjcl/sjcl.js"></script>
+<script inline src="dist/bundle.min.js"></script>
+
+</body>
+</html>
