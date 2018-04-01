@@ -11,12 +11,11 @@
     "build": "npm-run-all clean build:js process-html post-build",
     "post-build": "rimraf dist/bundle.min.js"
   },
-  "author": "",
+  "author": "Jacob Knotek",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-minify": "^0.2.0",
-    "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "html-minifier": "^3.5.7",
     "inline-source-cli": "^1.2.0",
