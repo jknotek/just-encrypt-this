@@ -42,6 +42,30 @@ label {
   margin-top: 10px;
 }
 
+#header {
+  margin-bottom: 30px;
+}
+
+#title {
+  font-size: 38px;
+  text-align: center;
+}
+
+#subtitle {
+  font-size: 13px;
+  text-align: center;
+}
+
+@media all and (max-width: 450px) {
+  #title {
+    font-size: 30px;
+  }
+
+  #subtitle {
+    font-size: 10px;
+  }
+}
+
 #horizontal-wrapper {
   height: 100%;
   min-width: 300px;
