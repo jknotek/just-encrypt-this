@@ -147,12 +147,19 @@ function run() {
   }
 }
 
+function callOnEnter(event, f) {
+  if (event.keyCode == 13) {
+    f();
+  }
+}
+
 function showMessage(message) {
   window.alert(message);
 }
 
 function showEncryptModule() {
   document.getElementById('encrypt-container').style.display = 'block';
+  document.getElementById('encrypt-message').focus();
 }
 
 function showDecryptModule() {
@@ -162,6 +169,7 @@ function showDecryptModule() {
 function showDecryptPasswordContainer() {
   document.getElementById('decrypt-password-container').style.display = 'block';
   document.getElementById('decrypt-output').style.display = 'none';
+  document.getElementById('decrypt-password').focus();
 }
 
 function showDecryptOutputContainer() {

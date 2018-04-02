@@ -16,8 +16,13 @@
                 <textarea id="encrypt-message"></textarea>
             </div>
             <div class="input-section">
-                <label for="encrypt-password">Password:</label>
-                <input id="encrypt-password" type="password" autocomplete="off">
+                <label for="encrypt-password">Password (optional):</label>
+                <input
+                    id="encrypt-password"
+                    type="password"
+                    autocomplete="off"
+                    onkeydown="callOnEnter(event, encryptInput)"
+                    >
             </div>
             <div class="input-section">
                 <button
@@ -35,12 +40,18 @@
             <div id="decrypt-password-container">
                 <div class="input-section">
                     <label for="decrypt-password">Password:</label>
-                    <input id="decrypt-password" type="password" autocomplete="off">
+                    <input
+                        id="decrypt-password"
+                        type="password"
+                        autocomplete="off"
+                        onkeydown="callOnEnter(event, decryptInput)"
+                        >
                 </div>
                 <div class="input-section">
                     <button
                         id="btn-decrypt-input"
-                        onclick="decryptInput()">Decrypt Message</button>
+                        onclick="decryptInput()"
+                        >Decrypt Message</button>
                 </div>
             </div>
             <div id="decrypt-output">
@@ -49,7 +60,8 @@
                     <textarea
                         id="decrypted-message"
                         placeholder="Sorry... This message is empty."
-                        readonly></textarea>
+                        readonly
+                        ></textarea>
                 </div>
                 <div class="input-section">
                     <button
